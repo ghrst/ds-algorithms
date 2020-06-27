@@ -8,8 +8,8 @@ class QueueEmpty(Exception):
     pass
 
 
-# Caution: This implementation does not shrink the memory if you repeatedly remove elements from queue. This will result in an O(m)
-#          memory complexity where m is the total number of enqueue operations during lifetime of the queue
+# Caution: This implementation does not shrink the memory of the underlying list. This will result in an O(m)
+#          memory complexity where m is the maximum number of enqueue operations during lifetime of the queue
 class ListQueue:
     DEFAULT_CAPACITY = 10
     def __init__(self):
