@@ -49,7 +49,11 @@ class SLinkedList:
         self._head = node.get_next()
         self._size -= 1
         return node.get_element()
-        
+    
+    def peek(self):
+        if self.is_empty():
+            raise ListEmpty('The list is empty!')
+        return self._head.get_element()
     
     
     
