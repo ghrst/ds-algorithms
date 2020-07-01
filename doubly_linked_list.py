@@ -69,6 +69,9 @@ class DLinkedList:
         self._size += 1
     
     def remove_last(self):
+        if self.is_empty():
+            raise ListEmpty('The list is empty!')
+        
         node = self._trailer.get_prev()
         self._trailer.set_prev(node.get_prev())
         node.get_prev().set_next(self._trailer)
