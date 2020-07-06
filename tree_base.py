@@ -5,7 +5,7 @@ Problem: Implement an abstract base class for tree ADT
 
 # Abstract base class
 class Tree:
-    class Position:
+    class _Position:
         def element(self):
             raise NotImplementedError('This method is not implemented yet! Implement it in a subclass.')
         
