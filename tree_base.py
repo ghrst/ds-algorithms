@@ -27,9 +27,16 @@ class Tree:
     def children(self, p):
         raise NotImplementedError('This method is not implemented yet! Implement it in a subclass.')
     
+    def positions(self):
+        raise NotImplementedError('This method is not implemented yet! Implement it in a subclass.')
+    
     def __len__(self):
         raise NotImplementedError('This method is not implemented yet! Implement it in a subclass.')
     
+    def __iter__(self):
+        for p in self.positions():
+            yield p.element()
+            
     def is_root(self, p):
         return p == self.root()
     
